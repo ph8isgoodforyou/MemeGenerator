@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root{
+    --text_color: rgba(240, 228, 228, 1);
+    --span_color: rgba(204, 163, 27, 1);
+    --button_color: rgba(204, 163, 27, 1);
+    --hover_color:  rgba(204, 163, 27, 0.7);
+    --background_color: rgba(12, 11, 11, 1);
+    --gray_img: rgba(90, 86, 86, 0.5);
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    outline: none;
+}
+h1, h2, h3, h4, h5, h6, p, li{
+    color: var(--text_color);
+}
+.heading{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+span{
+    color: var(--span_color);
+    margin-bottom: 5px;
+}
+button{
+    background-color: var(--button_color);
+    color: var(--text_color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+button:hover{
+    background-color: var(--hover_color);
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
+}
+img{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+main{
+    background-color: var(--background_color);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main section{
+    min-height: 50vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main section .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+}
+main section .container .row{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+main section .container .row .col-sm{
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+main section .container .row .col-sm img{
+    padding: 10px;
+}
+.animated{
+    height: 50vh;
+}
+.animated img:hover,
+.animated img:focus{
+    background-color: var(--gray_img);
+}
+#mess{
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media (max-width: 1000px){
+    h1{
+        font-size: 25px;
+    }
+    .btns{
+        display: flex;
+    }
+    button{
+        padding: 5px 10px;
+        margin: 20px 10px;
+    }
+}
